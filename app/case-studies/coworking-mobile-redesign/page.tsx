@@ -1,4 +1,3 @@
-import Navigation from "@/components/case-study/navigation"
 import HeroSection from "@/components/case-study/hero-section"
 import TldrSection from "@/components/case-study/tldr-section"
 import OutcomeSection from "@/components/case-study/outcome-section"
@@ -9,23 +8,65 @@ import DualSolutionSection from "@/components/case-study/dual-solution-section"
 import WeekExecutionSection from "@/components/case-study/week-execution-section"
 import ResultsSection from "@/components/case-study/results-section"
 import FinalImpactSection from "@/components/case-study/final-impact-section"
-import Footer from "@/components/case-study/footer"
+import CaseStudyLayout from "@/components/case-study/case-study-layout"
+
+const sections = [
+  { id: 'overview', title: 'Overview' },
+  { id: 'tldr', title: 'TL;DR' },
+  { id: 'outcome', title: 'Outcome' },
+  { id: 'user-needs', title: 'User Needs' },
+  { id: 'my-role', title: 'My Role' },
+  { id: 'constraints', title: 'Constraints & Process' },
+  { id: 'solutions', title: 'Dual Solutions' },
+  { id: 'execution', title: 'Execution' },
+  { id: 'results', title: 'Results' },
+  { id: 'impact', title: 'Final Impact' },
+]
 
 export default function CoworkingCaseStudyPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-emerald-50">
-      <Navigation />
-      <HeroSection />
-      <TldrSection />
-      <OutcomeSection />
-      <UsersNeedsSection />
-      <MyRoleSection />
-      <ConstraintsProcessSection />
-      <DualSolutionSection />
-      <WeekExecutionSection />
-      <ResultsSection />
-      <FinalImpactSection />
-      <Footer />
-    </div>
+    <CaseStudyLayout sections={sections}>
+      <div className="pt-0">
+        <section id="overview">
+          <HeroSection />
+        </section>
+        
+        <section id="tldr" className="py-20">
+          <TldrSection />
+        </section>
+        
+        <section id="outcome" className="py-20">
+          <OutcomeSection />
+        </section>
+        
+        <section id="user-needs" className="py-20">
+          <UsersNeedsSection />
+        </section>
+        
+        <section id="my-role" className="py-20">
+          <MyRoleSection />
+        </section>
+        
+        <section id="constraints" className="py-20">
+          <ConstraintsProcessSection />
+        </section>
+        
+        <section id="solutions" className="py-20">
+          <DualSolutionSection />
+        </section>
+        
+        <section id="execution" className="py-20">
+          <WeekExecutionSection />
+        </section>
+        
+        <section id="results" className="py-20">
+          <ResultsSection />
+        </section>
+        
+        <section id="impact" className="py-20 pb-32">
+          <FinalImpactSection />
+        </section>
+      </div>
+    </CaseStudyLayout>
   )
 }

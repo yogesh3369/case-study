@@ -10,6 +10,12 @@ const config: Config = {
   ],
   theme: {
   	extend: {
+      fontFamily: {
+        handwriting: ['var(--font-caveat)', 'cursive'],
+      },
+      rotate: {
+        '35': '35deg',
+      },
   		colors: {
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
@@ -83,11 +89,29 @@ const config: Config = {
   				to: {
   					height: '0'
   				}
-  			}
+  			},
+        'float': {
+          '0%, 100%': {
+            transform: 'translateY(0) rotate(-6deg)'
+          },
+          '50%': {
+            transform: 'translateY(-10px) rotate(-6deg)'
+          }
+        },
+        'draw-arrow': {
+          '0%': {
+            strokeDashoffset: '100'
+          },
+          '100%': {
+            strokeDashoffset: '0'
+          }
+        }
   		},
   		animation: {
   			'accordion-down': 'accordion-down 0.2s ease-out',
-  			'accordion-up': 'accordion-up 0.2s ease-out'
+  			'accordion-up': 'accordion-up 0.2s ease-out',
+        'float': 'float 3s ease-in-out infinite',
+        'draw-arrow': 'draw-arrow 1.5s ease-in-out forwards'
   		}
   	}
   },

@@ -1,8 +1,8 @@
-import { ArrowRight, Clock } from "lucide-react"
+import { ArrowRight, Clock, TrendingUp, ExternalLink, Sparkles } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
-import { Card } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
+import { motion } from "framer-motion"
 
 export default function CaseStudiesSection() {
   const caseStudies = [
@@ -63,104 +63,127 @@ export default function CaseStudiesSection() {
   ]
 
   return (
-    <section id="case-studies" className="py-20 bg-gradient-to-br from-slate-50 to-blue-50">
-      <div className="container mx-auto px-6">
+    <section id="case-studies" className="py-24 relative overflow-hidden">
+      {/* Background Elements */}
+      <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-0">
+        <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-gradient-to-b from-emerald-50/50 to-transparent rounded-full blur-3xl transform translate-x-1/4 -translate-y-1/4"></div>
+        <div className="absolute bottom-0 left-0 w-1/2 h-1/2 bg-gradient-to-t from-blue-50/50 to-transparent rounded-full blur-3xl transform -translate-x-1/4 translate-y-1/4"></div>
+      </div>
+      
+      <div className="container mx-auto px-4 sm:px-6 relative z-10">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-slate-900">Featured Case Studies</h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full"></div>
-            <p className="text-slate-600 mt-4 text-lg max-w-2xl mx-auto">
-              Explore detailed case studies showcasing my approach to solving complex UX challenges with measurable
-              results
+          {/* Section Header */}
+          <div className="text-center relative mb-24">
+            <div className="inline-block">
+              <div className="relative inline-block">
+                <span className="absolute -top-6 -right-6 text-purple-500 rotate-12">
+                  <Sparkles className="h-5 w-5" />
+                </span>
+                <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-3 relative inline-block">
+                  Featured Work
+                </h2>
+                <span className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-emerald-400 via-blue-500 to-purple-500 rounded-full"></span>
+              </div>
+            </div>
+            <p className="text-slate-600 mt-6 text-lg max-w-2xl mx-auto">
+              Explore how I solve complex UX challenges with measurable results
             </p>
           </div>
 
-          <div className="space-y-12">
+          {/* Case Studies Showcase */}
+          <div className="relative">
             {caseStudies.map((study, index) => (
-              <Card
-                key={study.id}
-                className="border-0 shadow-xl bg-white hover:shadow-2xl transition-all duration-500 overflow-hidden"
-              >
-                <div className={`grid lg:grid-cols-2 gap-0 ${index % 2 === 1 ? "lg:grid-flow-col-dense" : ""}`}>
-                  {/* Image Section */}
-                  <div
-                    className={`relative overflow-hidden bg-gradient-to-br ${study.bgGradient} ${index % 2 === 1 ? "lg:col-start-2" : ""}`}
-                  >
-                    <div className="aspect-video lg:aspect-square relative">
-                      <img
-                        src={study.image || "/placeholder.svg"}
-                        alt={study.title}
-                        className="w-full h-full object-cover"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+              <div key={study.id} className="mb-32 last:mb-0">
+                <div className={`flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} items-center gap-10`}>
+                  {/* Featured Image */}
+                  <div className="w-full lg:w-7/12 relative group">
+                    <div 
+                      className={`absolute inset-0 bg-gradient-to-br ${study.bgGradient} opacity-30 group-hover:opacity-10 rounded-3xl transition-all duration-500 blur-xl group-hover:blur-2xl -m-4`} 
+                      style={{ mixBlendMode: 'multiply' }}
+                    ></div>
+                    <div className="relative overflow-hidden rounded-2xl border border-slate-200/50 shadow-lg group-hover:shadow-xl transition-all duration-500">
+                      <div className="aspect-[16/9] relative">
+                        <img 
+                          src={study.image || "/placeholder.svg"} 
+                          alt={study.title} 
+                          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-slate-900/70 via-slate-900/20 to-transparent"></div>
+                        
+                        {/* Stats Overlay */}
+                        <div className="absolute bottom-4 left-4 right-4 flex justify-between items-end">
+                          <div className="flex items-center gap-3">
+                            <Badge className={`bg-gradient-to-r ${study.gradient} text-white border-0 py-1 font-medium backdrop-blur-sm`}>
+                              {study.category}
+                            </Badge>
+                            <div className="bg-black/30 text-white text-sm py-1 px-3 rounded-full backdrop-blur-sm flex items-center gap-1.5">
+                              <Clock className="h-3 w-3 opacity-70" />
+                              {study.duration}
+                            </div>
+                          </div>
+                          
+                          <div className={`bg-gradient-to-r ${study.gradient} text-white font-bold rounded-full py-1 px-3 text-sm flex items-center gap-1.5`}>
+                            <TrendingUp className="h-3 w-3" />
+                            +{study.impact.conversion}
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
-
-                  {/* Content Section */}
-                  <div className={`p-10 lg:p-12 ${index % 2 === 1 ? "lg:col-start-1" : ""}`}>
-                    <div className="flex items-center gap-3 mb-4">
-                      <Badge className={`bg-gradient-to-r ${study.gradient} text-white border-0`}>
-                        {study.category}
-                      </Badge>
-                      <div className="flex items-center gap-2 text-slate-500 text-sm">
-                        <Clock className="h-4 w-4" />
-                        {study.duration}
+                  
+                  {/* Content */}
+                  <div className="w-full lg:w-5/12">
+                    <div className="space-y-5">
+                      <div className="space-y-2">
+                        <h3 className="text-2xl md:text-3xl font-bold text-slate-900 leading-tight">{study.title}</h3>
+                        <p className="text-lg text-slate-600 font-medium">{study.subtitle}</p>
+                      </div>
+                      
+                      <p className="text-slate-600 leading-relaxed">{study.description}</p>
+                      
+                      {/* Impact Grid */}
+                      <div className="grid grid-cols-3 gap-4 py-3">
+                        <div>
+                          <div className={`text-xl font-black bg-gradient-to-r ${study.gradient} bg-clip-text text-transparent`}>+{study.impact.conversion}</div>
+                          <div className="text-slate-500 text-sm">Conversion</div>
+                        </div>
+                        <div>
+                          <div className={`text-xl font-black bg-gradient-to-r ${study.gradient} bg-clip-text text-transparent`}>{study.impact.revenue}</div>
+                          <div className="text-slate-500 text-sm">Revenue</div>
+                        </div>
+                        <div>
+                          <div className={`text-xl font-black bg-gradient-to-r ${study.gradient} bg-clip-text text-transparent`}>+{study.impact.efficiency}</div>
+                          <div className="text-slate-500 text-sm">Efficiency</div>
+                        </div>
+                      </div>
+                      
+                      {/* Tags */}
+                      <div className="flex flex-wrap gap-2">
+                        {study.tags.map((tag, tagIndex) => (
+                          <Badge key={tagIndex} variant="secondary" className="text-slate-600 px-3 py-1 bg-slate-100/80">
+                            {tag}
+                          </Badge>
+                        ))}
+                      </div>
+                      
+                      <div className="pt-2">
+                        <Button
+                          asChild
+                          className={`bg-gradient-to-r ${study.gradient} hover:opacity-90 text-white rounded-full px-8 py-6 h-auto group relative overflow-hidden`}
+                        >
+                          <Link href={`/case-studies/${study.id}`} className="flex items-center gap-3">
+                            <span className="relative z-10">View Case Study</span>
+                            <span className="relative z-10 transition-transform group-hover:translate-x-1">
+                              <ExternalLink className="h-4 w-4" />
+                            </span>
+                            <span className="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-opacity"></span>
+                          </Link>
+                        </Button>
                       </div>
                     </div>
-
-                    <h3 className="text-3xl font-bold text-slate-900 mb-2">{study.title}</h3>
-                    <p className="text-xl text-slate-600 mb-4 font-medium">{study.subtitle}</p>
-                    <p className="text-slate-600 mb-8 leading-relaxed">{study.description}</p>
-
-                    {/* Impact Metrics */}
-                    <div className="grid grid-cols-3 gap-4 mb-8">
-                      <div className="text-center">
-                        <div
-                          className={`text-2xl font-black bg-gradient-to-r ${study.gradient} bg-clip-text text-transparent mb-1`}
-                        >
-                          +{study.impact.conversion}
-                        </div>
-                        <div className="text-slate-500 text-sm">Conversion</div>
-                      </div>
-                      <div className="text-center">
-                        <div
-                          className={`text-2xl font-black bg-gradient-to-r ${study.gradient} bg-clip-text text-transparent mb-1`}
-                        >
-                          {study.impact.revenue}
-                        </div>
-                        <div className="text-slate-500 text-sm">Revenue Impact</div>
-                      </div>
-                      <div className="text-center">
-                        <div
-                          className={`text-2xl font-black bg-gradient-to-r ${study.gradient} bg-clip-text text-transparent mb-1`}
-                        >
-                          +{study.impact.efficiency}
-                        </div>
-                        <div className="text-slate-500 text-sm">Efficiency</div>
-                      </div>
-                    </div>
-
-                    {/* Tags */}
-                    <div className="flex flex-wrap gap-2 mb-8">
-                      {study.tags.map((tag, tagIndex) => (
-                        <Badge key={tagIndex} variant="secondary" className="text-slate-600">
-                          {tag}
-                        </Badge>
-                      ))}
-                    </div>
-
-                    <Button
-                      asChild
-                      className={`bg-gradient-to-r ${study.gradient} hover:opacity-90 text-white rounded-full px-8`}
-                    >
-                      <Link href={`/case-studies/${study.id}`} className="flex items-center gap-2">
-                        View Case Study
-                        <ArrowRight className="h-4 w-4" />
-                      </Link>
-                    </Button>
                   </div>
                 </div>
-              </Card>
+              </div>
             ))}
           </div>
         </div>
