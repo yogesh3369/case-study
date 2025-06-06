@@ -1,0 +1,7 @@
+<svg width="120" height="40" xmlns="http://www.w3.org/2000/svg">
+  <rect width="120" height="40" fill="transparent"/>
+  <text x="60" y="25" font-family="Arial" font-size="12" font-weight="bold" fill="#333333" text-anchor="middle">UX Unicorns</text>
+  <path d="M25,15 L25,25 M25,15 L30,20 L25,25" stroke="#a855f7" stroke-width="2" fill="none"/>
+  <path d="M35,15 L35,25" stroke="#a855f7" stroke-width="2" fill="none"/>
+  <path d="M40,20 L45,15 L45,25" stroke="#a855f7" stroke-width="2" fill="none"/>
+</svg>

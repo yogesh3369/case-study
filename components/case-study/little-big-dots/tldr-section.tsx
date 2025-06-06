@@ -10,7 +10,7 @@ export default function TldrSection() {
             <h2 className="text-4xl md:text-5xl font-bold mb-4 text-slate-900">TL;DR</h2>
             <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-indigo-500 mx-auto rounded-full"></div>
             <p className="text-slate-600 mt-4 text-lg max-w-2xl mx-auto">
-              In October 2024, a single LinkedIn DM about an AI tool called v0 spun into weekend-long tool binging. Two weeks later, Little Big Dots was live—a community for 35+ designers across three personas, featuring personalized automation workflows and self-hosted infrastructure that slashed costs by 70%.
+            In October 2024, a curious LinkedIn DM about an AI tool called v0 sparked a series of weekend-long tool binges. What started as a fun deep dive soon evolved into building Little Big Dots—a design community powered by personalized automation workflows and a self-hosted infrastructure that cut costs by over 70%.
             </p>
           </div>
 

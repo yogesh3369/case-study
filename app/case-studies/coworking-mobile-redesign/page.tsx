@@ -8,6 +8,7 @@ import DualSolutionSection from "@/components/case-study/dual-solution-section"
 import WeekExecutionSection from "@/components/case-study/week-execution-section"
 import ResultsSection from "@/components/case-study/results-section"
 import FinalImpactSection from "@/components/case-study/final-impact-section"
+import ArtifactsSection from "@/components/case-study/artifacts-section"
 import CaseStudyLayout from "@/components/case-study/case-study-layout"
 
 const sections = [
@@ -18,10 +19,38 @@ const sections = [
   { id: 'my-role', title: 'My Role' },
   { id: 'constraints', title: 'Constraints & Process' },
   { id: 'solutions', title: 'Dual Solutions' },
+  { id: 'artifacts', title: 'Design Artifacts' },
   { id: 'execution', title: 'Execution' },
   { id: 'results', title: 'Results' },
   { id: 'impact', title: 'Final Impact' },
 ]
+
+const artifactsData = {
+  screens: {
+    title: 'Desktop Screens',
+    beforeImage: '/placeholder.svg', // Replace with actual image paths
+    afterImage: '/placeholder.svg',
+    description: 'Comparison of the main booking flow before and after the redesign.'
+  },
+  wireframes: {
+    title: 'Wireframes',
+    beforeImage: '/placeholder.svg',
+    afterImage: '/placeholder.svg',
+    description: 'Initial wireframes showing the evolution of the user interface.'
+  },
+  mobileScreens: {
+    title: 'Mobile Screens',
+    beforeImage: '/placeholder.svg',
+    afterImage: '/placeholder.svg',
+    description: 'Mobile experience before and after the redesign.'
+  },
+  aiAutomation: {
+    title: 'AI Automation Flow',
+    beforeImage: '/placeholder.svg',
+    afterImage: '/placeholder.svg',
+    description: 'User flow showing the AI automation implementation.'
+  }
+}
 
 export default function CoworkingCaseStudyPage() {
   return (
@@ -53,6 +82,10 @@ export default function CoworkingCaseStudyPage() {
         
         <section id="solutions" className="py-20">
           <DualSolutionSection />
+        </section>
+        
+        <section id="artifacts" className="py-20">
+          <ArtifactsSection artifacts={artifactsData} />
         </section>
         
         <section id="execution" className="py-20">

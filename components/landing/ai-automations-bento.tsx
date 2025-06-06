@@ -62,48 +62,26 @@ const aiFeatures = [
 
 export default function AIAutomationsSection() {
   return (
-    <section id="ai-automations" className="py-24 relative overflow-hidden">
+    <section id="ai-automations" className="pt-16 pb-20 md:pt-20 md:pb-24 relative overflow-hidden">
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="mb-16 text-center">
-          <div className="inline-flex items-center px-4 py-2 bg-slate-100 rounded-full mb-4">
-            <Sparkles className="h-4 w-4 mr-2 text-emerald-600" />
-            <span className="text-sm font-medium text-gray-800">Powered by AI</span>
+        <div className="mb-12 text-center">
+          <div className="inline-flex items-center px-3 py-1.5 bg-slate-100 rounded-full mb-3">
+            <Sparkles className="h-3.5 w-3.5 mr-1.5 text-emerald-600" />
+            <span className="text-xs font-medium text-gray-800">Powered by AI</span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900 tracking-tight">
+          <h2 className="text-3xl md:text-4xl font-bold mb-3 text-gray-900">
             AI Automations <span className="text-emerald-600">for Everyone</span>
           </h2>
-          <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-8">
+          <p className="text-sm md:text-base text-gray-600 max-w-2xl mx-auto leading-relaxed">
             Leverage cutting-edge artificial intelligence to automate and enhance your business processes without writing a single line of code.
           </p>
         </div>
 
-        <BentoGrid className="lg:grid-rows-3 mb-12">
+        <BentoGrid className="lg:grid-rows-3">
           {aiFeatures.map((feature) => (
             <BentoCard key={feature.name} {...feature} />
           ))}
         </BentoGrid>
-        
-        <div className="mt-12 text-center">
-          <a 
-            href="/ai-automations"
-            className="inline-flex items-center px-8 py-4 bg-emerald-600 hover:bg-emerald-700 text-white font-medium rounded-full shadow-md hover:shadow-lg hover:translate-y-[-2px] transition-all duration-300"
-          >
-            Explore All Automations
-            <svg 
-              xmlns="http://www.w3.org/2000/svg" 
-              className="ml-2 h-5 w-5" 
-              viewBox="0 0 24 24" 
-              fill="none" 
-              stroke="currentColor" 
-              strokeWidth="2" 
-              strokeLinecap="round" 
-              strokeLinejoin="round"
-            >
-              <path d="M5 12h14"></path>
-              <path d="m12 5 7 7-7 7"></path>
-            </svg>
-          </a>
-        </div>
       </div>
     </section>
   );

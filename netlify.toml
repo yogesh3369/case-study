@@ -1,0 +1,13 @@
+[build]
+  command = "pnpm build"
+  publish = ".next"
+
+[build.environment]
+  NODE_VERSION = "22.16.0"
+  NPM_FLAGS = "--version"
+
+[functions]
+  node_bundler = "esbuild"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"

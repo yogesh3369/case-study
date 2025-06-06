@@ -4,6 +4,7 @@ import { ReactNode, useState, useEffect } from 'react';
 import { X, Menu, ArrowUp, ArrowLeft } from 'lucide-react';
 import Link from 'next/link';
 import { cn } from '@/lib/utils';
+import ScrollToTopButton from '@/components/ui/scroll-to-top-button';
 
 interface Section {
   id: string;
@@ -114,6 +115,9 @@ export default function CaseStudyLayout({ children, sections }: CaseStudyLayoutP
         <Menu className="w-6 h-6" />
       </button>
 
+      {/* Scroll to top button - visible on desktop and tablet */}
+      <ScrollToTopButton className="lg:block hidden" />
+      
       {/* Mobile Drawer */}
       <div
         className={cn(

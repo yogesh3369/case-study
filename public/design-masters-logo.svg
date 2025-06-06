@@ -1,0 +1,6 @@
+<svg width="120" height="40" xmlns="http://www.w3.org/2000/svg">
+  <rect width="120" height="40" fill="transparent"/>
+  <text x="60" y="25" font-family="Arial" font-size="12" font-weight="bold" fill="#333333" text-anchor="middle">Design Masters</text>
+  <path d="M20,15 L30,15 L35,20 L30,25 L20,25 Z" fill="#6366f1" />
+  <circle cx="40" cy="20" r="5" fill="#818cf8" />
+</svg>
