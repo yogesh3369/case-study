@@ -2,7 +2,7 @@ import Navigation from "@/components/landing/navigation"
 import HeroSection from "@/components/landing/hero-section"
 import AboutSection from "@/components/landing/about-section"
 import CaseStudiesSection from "@/components/landing/case-studies-section"
-import AIAutomationsSection from "@/components/landing/ai-automations-section"
+import AIAutomationsSection from "@/components/landing/ai-automations-bento"
 import ContactSection from "@/components/landing/contact-section"
 import Footer from "@/components/landing/footer"
 
