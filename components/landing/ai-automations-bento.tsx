@@ -5,9 +5,9 @@ import { BentoCard, BentoGrid } from "@/components/ui/bento-grid";
 const aiFeatures = [
   {
     Icon: Bot,
-    name: "AI Chatbots",
-    description: "Custom conversational agents that engage with your customers 24/7, providing instant support and information.",
-    href: "/ai-automations/chatbots",
+    name: "AI-Powered Outreach Generator",
+    description: "Transform cold outreach into warm conversations. This tool analyzes prospect data from LinkedIn profiles and company websites to automatically generate personalized, compelling sales emails that resonate with your target audience.",
+    href: "/ai-automations/outreach-generator",
     cta: "Learn more",
     background: (
       <div className="absolute inset-0 bg-gradient-to-br from-purple-500/20 to-purple-100/10 opacity-60" />
@@ -16,9 +16,9 @@ const aiFeatures = [
   },
   {
     Icon: BarChart3,
-    name: "Data Analysis",
-    description: "Intelligent systems that process and analyze large datasets to extract valuable insights for your business.",
-    href: "/ai-automations/data-analysis",
+    name: "AI-Powered Candidate Evaluation",
+    description: "Streamline your hiring process with intelligent resume screening. Analyze company culture, extract job requirements, and automatically evaluate candidate resumes against role-specific criteria.",
+    href: "/ai-automations/candidate-evaluation",
     cta: "Learn more",
     background: (
       <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-blue-100/10 opacity-60" />
@@ -27,9 +27,9 @@ const aiFeatures = [
   },
   {
     Icon: Cpu,
-    name: "Workflow Automation",
-    description: "Streamline repetitive tasks and processes with smart automation tools powered by artificial intelligence.",
-    href: "/ai-automations/workflow",
+    name: "RAG-Powered HR Policy Chatbot",
+    description: "Advanced Retrieval-Augmented Generation chatbot that instantly retrieves and responds to employee policy questions with source-backed answers about leaves, benefits, and workplace policies.",
+    href: "/ai-automations/hr-chatbot",
     cta: "Learn more",
     background: (
       <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/20 to-emerald-100/10 opacity-60" />
@@ -38,9 +38,9 @@ const aiFeatures = [
   },
   {
     Icon: Globe,
-    name: "Content Generation",
-    description: "AI-powered content creation for blogs, social media, and marketing materials tailored to your brand voice.",
-    href: "/ai-automations/content",
+    name: "Skills Path Generator",
+    description: "Transform your career goals into actionable learning plans. This intelligent AI agent analyzes your background, skills, and aspirations to create custom-tailored learning roadmaps.",
+    href: "/ai-automations/skills-path",
     cta: "Learn more",
     background: (
       <div className="absolute inset-0 bg-gradient-to-br from-orange-500/20 to-orange-100/10 opacity-60" />
@@ -49,9 +49,9 @@ const aiFeatures = [
   },
   {
     Icon: Sparkles,
-    name: "AI-Powered Insights",
-    description: "Transform raw data into actionable business intelligence with our advanced machine learning algorithms.",
-    href: "/ai-automations/insights",
+    name: "AI Social Media Scheduler",
+    description: "Automate your social media presence with AI-powered content creation and scheduling. This system scrapes relevant articles, generates engaging posts, and publishes them across Twitter and LinkedIn at optimal times.",
+    href: "/ai-automations/social-media",
     cta: "Learn more",
     background: (
       <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/20 to-indigo-100/10 opacity-60" />

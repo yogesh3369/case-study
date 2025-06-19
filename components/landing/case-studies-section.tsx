@@ -29,7 +29,7 @@ export default function CaseStudiesSection() {
       subtitle: "Early Childhood Learning Platform",
       description:
         "Designed an engaging digital learning experience for preschoolers, combining educational content with playful interactions.",
-      image: "/placeholder.svg?height=600&width=800",
+      image: "/LBD front.png",
       category: "EdTech",
       duration: "6 weeks",
       impact: {
@@ -42,22 +42,22 @@ export default function CaseStudiesSection() {
       bgGradient: "from-amber-50 to-orange-50",
     },
     {
-      id: "saas-onboarding",
-      title: "SaaS Onboarding",
-      subtitle: "Improving User Activation by 85%",
+      id: "coming-soon",
+      title: "New Project",
+      subtitle: "Coming Soon",
       description:
-        "Created a progressive onboarding flow that guides users to their first 'aha' moment faster, significantly improving activation rates.",
+        "I'm currently working on something exciting! Check back soon to see my latest case study.",
       image: "/placeholder.svg?height=600&width=800",
-      category: "SaaS",
-      duration: "5 weeks",
+      category: "Coming Soon",
+      duration: "In Progress",
       impact: {
-        conversion: "85%",
-        revenue: "₹6.8L",
-        efficiency: "70%",
+        conversion: "0%",
+        revenue: "TBD",
+        efficiency: "0%",
       },
-      tags: ["SaaS", "Onboarding", "Activation"],
-      gradient: "from-purple-500 to-fuchsia-600",
-      bgGradient: "from-purple-50 to-fuchsia-50",
+      tags: ["Coming", "Soon", "2025"],
+      gradient: "from-gray-400 to-slate-600",
+      bgGradient: "from-gray-50 to-slate-100",
     },
   ]
 
@@ -99,13 +99,15 @@ export default function CaseStudiesSection() {
                     <div className="bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-sm font-medium text-slate-800">
                       {study.category}
                     </div>
-                    <div className="flex items-center gap-1.5 text-sm font-medium text-slate-600">
-                      <Clock className="h-4 w-4" />
-                      <span>{study.duration}</span>
-                      {study.id === 'little-big-dots' && (
-                        <span className="ml-2 px-2 py-0.5 bg-amber-100 text-amber-800 text-xs rounded-full">Featured</span>
-                      )}
-                    </div>
+                    {study.id !== 'coming-soon' && (
+                      <div className="flex items-center gap-1.5 text-sm font-medium text-slate-600">
+                        <Clock className="h-4 w-4" />
+                        <span>{study.duration}</span>
+                        {study.id === 'little-big-dots' && (
+                          <span className="ml-2 px-2 py-0.5 bg-amber-100 text-amber-800 text-xs rounded-full">Featured</span>
+                        )}
+                      </div>
+                    )}
                   </div>
                 </div>
 
@@ -117,7 +119,7 @@ export default function CaseStudiesSection() {
                       <span className="text-sm font-medium text-slate-500">{study.category}</span>
                     </div>
                     <h3 className="text-xl font-bold text-slate-900 mb-2 line-clamp-2">{study.title}</h3>
-                    <p className="text-slate-600 mb-4 line-clamp-2">{study.description}</p>
+                    <p className="text-slate-600 mb-4 line-clamp-2">{study.subtitle}</p>
                     
                     {/* Impact */}
                     <div className="grid grid-cols-3 gap-3 mb-5">
@@ -172,7 +174,6 @@ export default function CaseStudiesSection() {
               </div>
             ))}
           </div>
-
         </div>
       </div>
       

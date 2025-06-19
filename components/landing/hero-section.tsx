@@ -4,10 +4,22 @@ import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import ProfileImage from "./ProfileImage"
 import { GradientButton } from "@/components/ui/gradient-button"
+import { useEffect } from "react"
 
 export default function LandingHeroSection() {
   return (
     <section className="min-h-screen flex items-center relative overflow-hidden bg-white">
+      <style jsx global>{`
+        @keyframes gentle-sway {
+          0% { transform: rotate(-1deg); }
+          50% { transform: rotate(1deg); }
+          100% { transform: rotate(-1deg); }
+        }
+        .animate-gentle-sway {
+          animation: gentle-sway 5s ease-in-out infinite;
+          transform-origin: top center;
+        }
+      `}</style>
       <div className="absolute inset-0">
         <div className="absolute top-20 right-20 w-96 h-96 bg-blue-100/40 rounded-full blur-3xl"></div>
         <div className="absolute bottom-20 left-20 w-80 h-80 bg-purple-100/30 rounded-full blur-3xl"></div>
@@ -113,13 +125,25 @@ export default function LandingHeroSection() {
             </div>
           </div>
           
-          {/* Video Placeholder with position relative to contain the absolute positioned arrow */}
-          <div className="relative">
-
+          {/* Video Placeholder with ID card-like hanging effect */}
+          <div className="relative flex justify-center pt-10">
+            {/* ID Card Hanging String */}
+            <div className="absolute -top-2 left-1/2 transform -translate-x-1/2 w-[2px] h-20 bg-gradient-to-b from-slate-300 to-slate-400"></div>
             
-            {/* The actual video container */}
-            <div className="rounded-2xl overflow-hidden shadow-2xl border-2 border-white/20">
-              <div className="aspect-video bg-gradient-to-br from-blue-100 to-purple-100 flex items-center justify-center">
+            {/* ID Card Clip */}
+            <div className="absolute top-6 left-1/2 transform -translate-x-1/2 w-8 h-4 bg-gradient-to-b from-slate-400 to-slate-500 rounded-t-lg z-10"></div>
+            
+            {/* The actual video container with ID card styling - reduced to 50% size */}
+            <div className="rounded-2xl overflow-hidden shadow-2xl border-2 border-white/20 relative animate-gentle-sway w-1/2 mx-auto">
+              {/* ID Card Header */}
+              <div className="absolute top-0 left-0 right-0 h-6 bg-gradient-to-r from-blue-600 to-indigo-600 flex items-center px-3">
+                <div className="w-2 h-2 rounded-full bg-white mr-1"></div>
+                <div className="w-2 h-2 rounded-full bg-white opacity-70 mr-1"></div>
+                <div className="w-2 h-2 rounded-full bg-white opacity-40"></div>
+                <span className="text-[10px] text-white/80 ml-auto font-medium">PORTFOLIO SHOWCASE</span>
+              </div>
+              
+              <div className="aspect-[9/14] bg-gradient-to-br from-blue-100 to-purple-100 flex items-center justify-center pt-6">
                 <div className="text-center p-6">
                   <div className="w-16 h-16 bg-white/30 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto mb-4 hover:bg-white/40 transition-all cursor-pointer">
                     <svg className="w-8 h-8 text-blue-600" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
