@@ -138,15 +138,7 @@ export default function HeroSection() {
           </div>
         </div>
         
-        {/* Featured in badges */}
-        <div className="max-w-3xl mx-auto mt-16">
-          <p className="text-center text-sm text-slate-500 uppercase tracking-wider mb-6">Supported by</p>
-          <div className="flex flex-wrap justify-center items-center gap-8 opacity-60">
-            <Image src="/design-masters-logo.svg" alt="Design Masters" width={120} height={40} className="grayscale hover:grayscale-0 transition-all duration-300" />
-            <Image src="/ux-unicorns-logo.svg" alt="UX Unicorns" width={120} height={40} className="grayscale hover:grayscale-0 transition-all duration-300" />
-            <Image src="/ai-tools-logo.svg" alt="AI Tools" width={120} height={40} className="grayscale hover:grayscale-0 transition-all duration-300" />
-          </div>
-        </div>
+
       </div>
     </section>
   )

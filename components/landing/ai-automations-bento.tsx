@@ -7,7 +7,9 @@ const aiFeatures = [
     Icon: Bot,
     name: "AI-Powered Outreach Generator",
     description: "Transform cold outreach into warm conversations. This tool analyzes prospect data from LinkedIn profiles and company websites to automatically generate personalized, compelling sales emails that resonate with your target audience.",
-    href: "/ai-automations/outreach-generator",
+    href: "https://personalized-outreach-nine.vercel.app/",
+    target: "_blank",
+    rel: "noopener noreferrer",
     cta: "Learn more",
     background: (
       <div className="absolute inset-0 bg-gradient-to-br from-purple-500/20 to-purple-100/10 opacity-60" />
@@ -18,7 +20,9 @@ const aiFeatures = [
     Icon: BarChart3,
     name: "AI-Powered Candidate Evaluation",
     description: "Streamline your hiring process with intelligent resume screening. Analyze company culture, extract job requirements, and automatically evaluate candidate resumes against role-specific criteria.",
-    href: "/ai-automations/candidate-evaluation",
+    href: "https://resume-analyzer-ebon.vercel.app/",
+    target: "_blank",
+    rel: "noopener noreferrer",
     cta: "Learn more",
     background: (
       <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-blue-100/10 opacity-60" />
@@ -29,7 +33,9 @@ const aiFeatures = [
     Icon: Cpu,
     name: "RAG-Powered HR Policy Chatbot",
     description: "Advanced Retrieval-Augmented Generation chatbot that instantly retrieves and responds to employee policy questions with source-backed answers about leaves, benefits, and workplace policies.",
-    href: "/ai-automations/hr-chatbot",
+    href: "https://chat-webhook-lake.vercel.app/",
+    target: "_blank",
+    rel: "noopener noreferrer",
     cta: "Learn more",
     background: (
       <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/20 to-emerald-100/10 opacity-60" />
@@ -40,7 +46,9 @@ const aiFeatures = [
     Icon: Globe,
     name: "Skills Path Generator",
     description: "Transform your career goals into actionable learning plans. This intelligent AI agent analyzes your background, skills, and aspirations to create custom-tailored learning roadmaps.",
-    href: "/ai-automations/skills-path",
+    href: "https://skillpath-172f.vercel.app/",
+    target: "_blank",
+    rel: "noopener noreferrer",
     cta: "Learn more",
     background: (
       <div className="absolute inset-0 bg-gradient-to-br from-orange-500/20 to-orange-100/10 opacity-60" />
@@ -49,9 +57,11 @@ const aiFeatures = [
   },
   {
     Icon: Sparkles,
-    name: "AI Social Media Scheduler",
-    description: "Automate your social media presence with AI-powered content creation and scheduling. This system scrapes relevant articles, generates engaging posts, and publishes them across Twitter and LinkedIn at optimal times.",
-    href: "/ai-automations/social-media",
+    name: "SOW Creator",
+    description: "AI-powered Statement of Work generator that transforms basic project information into comprehensive, professional legal documents. Intelligently creates detailed scope, deliverables, milestones, payment terms, and legal clauses (IP rights, confidentiality, cancellation policies). Auto-populates Google Docs templates for instant client-ready SOWs. Reduces creation time from hours to minutes.",
+    href: "https://sow-creator.netlify.app/",
+    target: "_blank",
+    rel: "noopener noreferrer",
     cta: "Learn more",
     background: (
       <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/20 to-indigo-100/10 opacity-60" />

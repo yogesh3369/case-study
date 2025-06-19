@@ -31,6 +31,8 @@ const BentoCard = ({
   description,
   href,
   cta,
+  target,
+  rel,
 }: {
   name: string;
   className: string;
@@ -39,6 +41,8 @@ const BentoCard = ({
   description: string;
   href: string;
   cta: string;
+  target?: string;
+  rel?: string;
 }) => (
   <div
     key={name}
@@ -66,7 +70,7 @@ const BentoCard = ({
       )}
     >
       <Button variant="ghost" asChild size="sm" className="pointer-events-auto">
-        <a href={href}>
+        <a href={href} target={target} rel={rel}>
           {cta}
           <ArrowRightIcon className="ml-2 h-4 w-4" />
         </a>

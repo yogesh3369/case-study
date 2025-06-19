@@ -65,24 +65,24 @@ export default function LandingHeroSection() {
               <p className="text-sm font-medium text-slate-500 mb-4">Companies I've worked with</p>
               <div className="flex flex-wrap gap-6 items-center">
                 <img 
-                  src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" 
-                  alt="Google" 
-                  className="h-6 opacity-70 hover:opacity-100 transition-opacity"
+                  src="/stylework-black-logo.svg" 
+                  alt="Stylework" 
+                  className="h-6"
                 />
                 <img 
-                  src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" 
-                  alt="Microsoft" 
-                  className="h-5 opacity-70 hover:opacity-100 transition-opacity"
+                  src="/RARR.svg" 
+                  alt="RARR" 
+                  className="h-6"
                 />
                 <img 
-                  src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Meta-Logo.png" 
-                  alt="Meta" 
-                  className="h-5 opacity-70 hover:opacity-100 transition-opacity"
+                  src="/logoIdesign.png" 
+                  alt="Idesign" 
+                  className="h-6"
                 />
                 <img 
-                  src="https://upload.wikimedia.org/wikipedia/commons/0/01/LinkedIn_Logo.svg" 
-                  alt="LinkedIn" 
-                  className="h-5 opacity-70 hover:opacity-100 transition-opacity"
+                  src="/P2b.webp" 
+                  alt="P2b" 
+                  className="h-6"
                 />
               </div>
             </div>
