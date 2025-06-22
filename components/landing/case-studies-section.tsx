@@ -2,6 +2,8 @@ import { ArrowRight, Clock, TrendingUp, ExternalLink, Sparkles } from "lucide-re
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
+import Image from "next/image"
+import { GradientButton } from "@/components/ui/gradient-button"
 
 export default function CaseStudiesSection() {
   const caseStudies = [
@@ -62,126 +64,102 @@ export default function CaseStudiesSection() {
   ]
 
   return (
-    <section id="case-studies" className="pt-16 pb-20 md:pt-20 md:pb-24 bg-gradient-to-b from-slate-50 to-white">
+    <section id="case-studies" className="py-20 bg-white">
       <div className="container mx-auto px-4 sm:px-6 relative z-10">
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
-          <div className="text-center mb-12">
-            <div className="inline-flex items-center px-3 py-1.5 bg-blue-100 rounded-full mb-3">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center px-3 py-1.5 bg-slate-100 rounded-full mb-3">
               <TrendingUp className="h-3.5 w-3.5 mr-1.5 text-blue-600" />
               <span className="text-xs font-medium text-gray-800">Case Studies</span>
             </div>
             <h2 className="text-3xl md:text-4xl font-bold mb-3 text-gray-900">
-              Featured <span className="text-blue-600">Work</span>
+              Products <span className="text-blue-600">for Everyone</span>
             </h2>
             <p className="text-sm md:text-base text-gray-600 max-w-2xl mx-auto leading-relaxed">
-              Selected projects showcasing my approach to solving complex UX challenges with measurable results
+              Only the best of the best has made to here.
             </p>
           </div>
 
-          {/* Cards Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {caseStudies.map((study) => (
-              <div 
-                key={study.id}
-                className="group bg-white rounded-2xl overflow-hidden border border-slate-200 hover:border-transparent shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col h-full hover:-translate-y-1"
-              >
-                {/* Image */}
-                <div className="relative overflow-hidden aspect-video">
-                  <div className={`absolute inset-0 bg-gradient-to-br ${study.bgGradient} opacity-30 group-hover:opacity-10 transition-opacity duration-500`}></div>
-                  <img 
-                    src={study.image} 
-                    alt={study.title}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-slate-900/10 to-transparent"></div>
-                  <div className="absolute bottom-4 left-4 right-4 flex justify-between items-end">
-                    <div className="bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-sm font-medium text-slate-800">
-                      {study.category}
+          {caseStudies.map((study, index) => (
+            <div key={study.id} className={`mb-24 ${index < caseStudies.length - 1 ? 'border-b border-gray-100 pb-20' : ''}`}>
+              <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 items-center">
+                <div className="lg:w-1/2 order-2 lg:order-1">
+                  <h3 className="text-3xl md:text-4xl font-bold mb-3 leading-tight">
+                    <span className="bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent">
+                      {study.title}
+                    </span>
+                  </h3>
+                  <p className="text-gray-600 mb-10 text-lg font-light leading-relaxed">
+                    {study.subtitle}
+                  </p>
+                  
+                  <div className="flex flex-wrap gap-16 mb-12">
+                    <div>
+                      <p className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+                        {study.id === 'coming-soon' ? '0' : '45,00,000+'}
+                      </p>
+                      <p className="text-sm text-gray-500 mt-2 font-medium">users currently<br />on {study.title}</p>
                     </div>
-                    {study.id !== 'coming-soon' && (
-                      <div className="flex items-center gap-1.5 text-sm font-medium text-slate-600">
-                        <Clock className="h-4 w-4" />
-                        <span>{study.duration}</span>
-                        {study.id === 'little-big-dots' && (
-                          <span className="ml-2 px-2 py-0.5 bg-amber-100 text-amber-800 text-xs rounded-full">Featured</span>
-                        )}
-                      </div>
-                    )}
-                  </div>
-                </div>
-
-                {/* Content */}
-                <div className="p-6 flex-1 flex flex-col">
-                  <div className="flex-1">
-                    <div className="flex items-center gap-2 mb-3">
-                      <span className={`inline-block w-2 h-2 rounded-full bg-gradient-to-r ${study.gradient}`}></span>
-                      <span className="text-sm font-medium text-slate-500">{study.category}</span>
-                    </div>
-                    <h3 className="text-xl font-bold text-slate-900 mb-2 line-clamp-2">{study.title}</h3>
-                    <p className="text-slate-600 mb-4 line-clamp-2">{study.subtitle}</p>
-                    
-                    {/* Impact */}
-                    <div className="grid grid-cols-3 gap-3 mb-5">
-                      <div className="text-center p-2 rounded-lg bg-slate-50">
-                        <div className={`text-lg font-bold bg-gradient-to-r ${study.gradient} bg-clip-text text-transparent`}>
-                          +{study.impact.conversion}
-                        </div>
-                        <div className="text-xs text-slate-500">Growth</div>
-                      </div>
-                      <div className="text-center p-2 rounded-lg bg-slate-50">
-                        <div className={`text-lg font-bold bg-gradient-to-r ${study.gradient} bg-clip-text text-transparent`}>
-                          {study.impact.revenue}
-                        </div>
-                        <div className="text-xs text-slate-500">Revenue</div>
-                      </div>
-                      <div className="text-center p-2 rounded-lg bg-slate-50">
-                        <div className={`text-lg font-bold bg-gradient-to-r ${study.gradient} bg-clip-text text-transparent`}>
-                          +{study.impact.efficiency}
-                        </div>
-                        <div className="text-xs text-slate-500">Efficiency</div>
-                      </div>
-                    </div>
-                    
-                    {/* Tags */}
-                    <div className="flex flex-wrap gap-2 mb-5">
-                      {study.tags.map((tag, i) => (
-                        <span 
-                          key={i} 
-                          className="inline-block px-2.5 py-1 text-xs font-medium text-slate-600 bg-slate-100 rounded-full"
-                        >
-                          {tag}
-                        </span>
-                      ))}
+                    <div>
+                      <p className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+                        {study.id === 'coming-soon' ? '0' : '10,000+'}
+                      </p>
+                      <p className="text-sm text-gray-500 mt-2 font-medium">companies hire<br />on {study.title}</p>
                     </div>
                   </div>
                   
-                  {/* Button */}
-                  <Button
-                    asChild
-                    variant="outline"
-                    className={`mt-auto w-full border-slate-200 hover:bg-slate-50 group/button`}
-                  >
-                    <Link 
-                      href={`/case-studies/${study.id}`} 
-                      className="flex items-center justify-center gap-2"
+                  <div className="inline-block">
+                    <GradientButton
+                      href={study.id === 'coming-soon' ? '#' : `/case-studies/${study.id}`}
+                      icon={
+                        <svg 
+                          xmlns="http://www.w3.org/2000/svg" 
+                          width="16" 
+                          height="16" 
+                          viewBox="0 0 24 24" 
+                          fill="none" 
+                          stroke="currentColor" 
+                          strokeWidth="2" 
+                          strokeLinecap="round" 
+                          strokeLinejoin="round" 
+                          className="group-hover:translate-x-0.5 transition-transform duration-200"
+                        >
+                          <path d="M5 12h14"></path>
+                          <path d="m12 5 7 7-7 7"></path>
+                        </svg>
+                      }
                     >
-                      <span>View Case Study</span>
-                      <ArrowRight className="h-4 w-4" />
-                    </Link>
-                  </Button>
+                      {study.id === 'coming-soon' ? 'Coming soon' : 'View case study'}
+                    </GradientButton>
+                  </div>
+                </div>
+                
+                <div className="lg:w-1/2 order-1 lg:order-2">
+                  <div className="relative overflow-hidden rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition-shadow duration-300">
+                    {study.image.startsWith('/') ? (
+                      <img 
+                        src={study.image} 
+                        alt={study.title}
+                        className="w-full h-auto object-cover"
+                      />
+                    ) : (
+                      <Image
+                        src={study.image}
+                        alt={study.title}
+                        width={600}
+                        height={400}
+                        className="w-full h-auto object-cover"
+                      />
+                    )}
+                  </div>
                 </div>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
       </div>
-      
-      {/* Decorative Elements */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-100 rounded-full mix-blend-multiply filter blur-3xl opacity-20"></div>
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-100 rounded-full mix-blend-multiply filter blur-3xl opacity-20"></div>
-      </div>
+
     </section>
   )
 }

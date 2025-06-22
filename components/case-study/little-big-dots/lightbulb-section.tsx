@@ -84,14 +84,7 @@ export default function LightbulbSection() {
             <div className="bg-white rounded-2xl p-8 shadow-xl">
               <div className="grid md:grid-cols-3 gap-6 mb-10">
                 <div className="bg-gradient-to-br from-indigo-50 to-blue-50 p-6 rounded-xl shadow-lg">
-                  <div className="flex items-center gap-2 mb-3">
-                    <Image 
-                      src="/junior-designer-avatar.png" 
-                      alt="Junior Designer" 
-                      width={40} 
-                      height={40} 
-                      className="rounded-full"
-                    />
+                  <div className="mb-3">
                     <p className="font-semibold text-indigo-700">Junior Designer</p>
                   </div>
                   <p className="italic text-slate-700 border-l-3 border-indigo-300 pl-3">
@@ -100,14 +93,7 @@ export default function LightbulbSection() {
                 </div>
                 
                 <div className="bg-gradient-to-br from-blue-50 to-cyan-50 p-6 rounded-xl shadow-lg">
-                  <div className="flex items-center gap-2 mb-3">
-                    <Image 
-                      src="/mid-career-avatar.png" 
-                      alt="Mid-Career Designer" 
-                      width={40} 
-                      height={40} 
-                      className="rounded-full"
-                    />
+                  <div className="mb-3">
                     <p className="font-semibold text-blue-700">Mid-Career Designer</p>
                   </div>
                   <p className="italic text-slate-700 border-l-3 border-blue-300 pl-3">
@@ -116,14 +102,7 @@ export default function LightbulbSection() {
                 </div>
                 
                 <div className="bg-gradient-to-br from-cyan-50 to-teal-50 p-6 rounded-xl shadow-lg">
-                  <div className="flex items-center gap-2 mb-3">
-                    <Image 
-                      src="/senior-designer-avatar.png" 
-                      alt="Senior Designer" 
-                      width={40} 
-                      height={40} 
-                      className="rounded-full"
-                    />
+                  <div className="mb-3">
                     <p className="font-semibold text-cyan-700">Senior Designer</p>
                   </div>
                   <p className="italic text-slate-700 border-l-3 border-cyan-300 pl-3">

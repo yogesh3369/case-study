@@ -152,36 +152,7 @@ export default function LaunchSection() {
             </div>
           </div>
 
-          {/* Community Growth Graph */}
-          <div className="bg-white rounded-xl p-8 shadow-xl">
-            <div className="flex items-center justify-between mb-6">
-              <div className="flex items-center gap-3">
-                <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-indigo-600 rounded-lg flex items-center justify-center shadow-lg">
-                  <BarChart className="h-6 w-6 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-indigo-700">Projected Community Growth</h3>
-              </div>
-              <div className="flex items-center gap-3">
-                <div className="flex items-center gap-1">
-                  <div className="w-3 h-3 rounded-full bg-purple-500"></div>
-                  <span className="text-xs text-slate-700">Members</span>
-                </div>
-                <div className="flex items-center gap-1">
-                  <div className="w-3 h-3 rounded-full bg-indigo-500"></div>
-                  <span className="text-xs text-slate-700">Engagement</span>
-                </div>
-              </div>
-            </div>
-            
-            <div className="relative h-60 w-full">
-              <Image
-                src="/community-growth-chart.png"
-                alt="Projected Community Growth Chart"
-                fill
-                className="object-contain"
-              />
-            </div>
-          </div>
+
         </div>
       </div>
     </section>
