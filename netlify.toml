@@ -5,6 +5,8 @@
 [build.environment]
   NODE_VERSION = "22.16.0"
   NPM_FLAGS = "--version"
+  NETLIFY_USE_PNPM = "false"
+  NPM_VERSION = "10.9.2"
 
 [functions]
   node_bundler = "esbuild"
