@@ -53,65 +53,26 @@ export default function ConstraintsProcessSection() {
             </Card>
           </div>
         
-          <div>
-            <h3 className="text-xl font-semibold mb-4">How It Unfolded</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <Card className="h-full">
-                <CardContent className="pt-6">
-                  <h4 className="font-medium mb-2">Weeks 1-2 – Discovery & Research</h4>
-                  <ul className="list-disc pl-6 space-y-1">
-                    <li>Interviewed recruiters and managers</li>
-                    <li>Gathered pain points and desired improvements</li>
-                    <li>Analyzed competitor tools for inspiration</li>
-                  </ul>
-                </CardContent>
-              </Card>
-              
-              <Card className="h-full">
-                <CardContent className="pt-6">
-                  <h4 className="font-medium mb-2">Weeks 3-4 – Defining the Problems</h4>
-                  <ul className="list-disc pl-6 space-y-1">
-                    <li>Mapped pain points into user journeys</li>
-                    <li>Highlighted where existing workflows failed</li>
-                    <li>Began prioritizing fixes based on user impact</li>
-                  </ul>
-                </CardContent>
-              </Card>
-              
-              <Card className="h-full">
-                <CardContent className="pt-6">
-                  <h4 className="font-medium mb-2">Weeks 5-7 – Sketching & Ideation</h4>
-                  <ul className="list-disc pl-6 space-y-1">
-                    <li>Low-fidelity wireframes</li>
-                    <li>Explored layout improvements for forms, dashboards, and case management</li>
-                    <li>Introduced "OneView" for candidate comparison</li>
-                  </ul>
-                </CardContent>
-              </Card>
-              
-              <Card className="h-full">
-                <CardContent className="pt-6">
-                  <h4 className="font-medium mb-2">Weeks 8-12 – Prototyping & Testing</h4>
-                  <ul className="list-disc pl-6 space-y-1">
-                    <li>Built interactive prototypes in Figma</li>
-                    <li>Ran usability sessions to observe task completion and user reactions</li>
-                    <li>Incorporated feedback into refinements</li>
-                  </ul>
-                </CardContent>
-              </Card>
-              
-              <Card className="h-full md:col-span-2">
-                <CardContent className="pt-6">
-                  <h4 className="font-medium mb-2">Weeks 13-18 – Final Design & Handoff</h4>
-                  <ul className="list-disc pl-6 space-y-1">
-                    <li>Created high-fidelity UI designs</li>
-                    <li>Documented design decisions</li>
-                    <li>Shared guidelines for colors, typography, and UI components</li>
-                    <li>Prepared clean handoff files for dev implementation</li>
-                  </ul>
-                </CardContent>
-              </Card>
-            </div>
+          <div className="mt-8">
+            <Card className="border-0 shadow-xl bg-gradient-to-br from-blue-50 to-indigo-50 overflow-hidden">
+              <CardContent className="p-6">
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-indigo-500 rounded-xl flex items-center justify-center shadow-md">
+                    <Workflow className="h-6 w-6 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-slate-900">Design Process</h3>
+                </div>
+                <p className="text-lg text-slate-700 leading-relaxed">
+                  This project followed a structured 18-week design process, moving from initial research through to final handoff. 
+                  Each phase built upon insights from the previous one, ensuring that the final solution addressed real user needs 
+                  while working within our technical constraints.
+                </p>
+                <p className="text-lg text-slate-700 leading-relaxed mt-4">
+                  The process was collaborative throughout, with regular check-ins with recruiters and stakeholders to validate 
+                  direction and gather feedback on incremental improvements.
+                </p>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </div>
