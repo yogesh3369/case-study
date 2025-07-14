@@ -14,9 +14,8 @@ export default function MyRoleSection() {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
-            <div className="order-2 lg:order-1">
-              <div className="bg-gradient-to-br from-purple-50 to-indigo-50 rounded-2xl p-8 border border-purple-100 shadow-lg">
+          <div className="mb-16">
+            <div className="bg-gradient-to-br from-purple-50 to-indigo-50 rounded-2xl p-8 border border-purple-100 shadow-lg max-w-3xl mx-auto">
                 <div className="flex items-center gap-4 mb-6">
                   <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-indigo-500 rounded-xl flex items-center justify-center shadow-md">
                     <PencilRuler className="h-6 w-6 text-white" />
@@ -66,24 +65,6 @@ export default function MyRoleSection() {
                   </div>
                 </div>
               </div>
-            </div>
-            
-            <div className="order-1 lg:order-2 relative">
-              <div className="absolute -inset-1 bg-gradient-to-r from-purple-600/20 to-indigo-600/20 rounded-2xl blur-lg opacity-30"></div>
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-slate-200">
-                <div className="aspect-[4/3] relative">
-                  <Image 
-                    src="/placeholder.svg" 
-                    alt="Designer working on whiteboard" 
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <div className="bg-slate-900 text-white p-4">
-                  <p className="text-sm font-medium">Leading a whiteboarding session to map out user flows and pain points</p>
-                </div>
-              </div>
-            </div>
           </div>
           
           <div className="bg-gradient-to-br from-indigo-500/10 to-purple-500/10 rounded-2xl p-8 border border-indigo-100 shadow-lg text-center">

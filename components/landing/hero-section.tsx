@@ -125,7 +125,7 @@ export default function LandingHeroSection() {
             </div>
           </div>
           
-          {/* Video Placeholder with ID card-like hanging effect */}
+          {/* Profile Image with ID card-like hanging effect */}
           <div className="relative flex justify-center pt-10">
             {/* ID Card Hanging String */}
             <div className="absolute -top-2 left-1/2 transform -translate-x-1/2 w-[2px] h-20 bg-gradient-to-b from-slate-300 to-slate-400"></div>
@@ -133,25 +133,30 @@ export default function LandingHeroSection() {
             {/* ID Card Clip */}
             <div className="absolute top-6 left-1/2 transform -translate-x-1/2 w-8 h-4 bg-gradient-to-b from-slate-400 to-slate-500 rounded-t-lg z-10"></div>
             
-            {/* The actual video container with ID card styling - reduced to 50% size */}
+            {/* Profile Image Container */}
             <div className="rounded-2xl overflow-hidden shadow-2xl border-2 border-white/20 relative animate-gentle-sway w-1/2 mx-auto">
               {/* ID Card Header */}
-              <div className="absolute top-0 left-0 right-0 h-6 bg-gradient-to-r from-blue-600 to-indigo-600 flex items-center px-3">
+              <div className="absolute top-0 left-0 right-0 h-6 bg-gradient-to-r from-blue-600 to-indigo-600 flex items-center px-3 z-10">
                 <div className="w-2 h-2 rounded-full bg-white mr-1"></div>
                 <div className="w-2 h-2 rounded-full bg-white opacity-70 mr-1"></div>
                 <div className="w-2 h-2 rounded-full bg-white opacity-40"></div>
-                <span className="text-[10px] text-white/80 ml-auto font-medium">PORTFOLIO SHOWCASE</span>
+                <span className="text-[10px] text-white/80 ml-auto font-medium">PROFILE</span>
               </div>
               
-              <div className="aspect-[9/14] bg-gradient-to-br from-blue-100 to-purple-100 flex items-center justify-center pt-6">
-                <div className="text-center p-6">
-                  <div className="w-16 h-16 bg-white/30 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto mb-4 hover:bg-white/40 transition-all cursor-pointer">
-                    <svg className="w-8 h-8 text-blue-600" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M6.3 2.841A1.5 1.5 0 004 4.11v11.78a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z"></path>
-                    </svg>
+              <div className="aspect-[9/14] bg-gradient-to-br from-blue-100 to-purple-100 relative overflow-hidden pt-6">
+                {/* Replace the image source with your actual image path */}
+                <img 
+                  src="/profile-photo.jpg" 
+                  alt="Yogesh Kumar"
+                  className="w-full h-full object-cover object-top"
+                />
+                
+                {/* Decorative elements */}
+                <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-black/60 to-transparent flex items-end p-3">
+                  <div className="text-white">
+                    <p className="font-medium text-sm">Yogesh Kumar</p>
+                    <p className="text-xs opacity-80">Product Designer</p>
                   </div>
-                  <p className="text-slate-600 font-medium">Video Showcase</p>
-                  <p className="text-sm text-slate-500 mt-1">Your video will play here</p>
                 </div>
               </div>
             </div>

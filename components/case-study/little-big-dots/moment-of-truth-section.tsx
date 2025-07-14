@@ -2,7 +2,7 @@ import { Star, Heart, Trophy, Bookmark, Users, MessageSquare, ChevronRight } fro
 
 export default function MomentOfTruthSection() {
   const stats = [
-    { value: "250+", label: "Active community members", icon: Users, color: "from-fuchsia-500 to-pink-600" },
+    { value: "150+", label: "Active community members", icon: Users, color: "from-fuchsia-500 to-pink-600" },
     { value: "3", label: "AI design tool partnerships", icon: Bookmark, color: "from-pink-500 to-rose-600" },
     { value: "47", label: "Weekly active discussions", icon: MessageSquare, color: "from-rose-500 to-red-600" },
     { value: "14", label: "Designer mentor pairs", icon: Trophy, color: "from-red-500 to-orange-600" }
@@ -98,10 +98,10 @@ export default function MomentOfTruthSection() {
               <div className="grid md:grid-cols-2 gap-8 items-center">
                 <div>
                   <h3 className="text-2xl md:text-3xl font-bold text-slate-900 mb-6">
-                    From 35 to 250+ and Growing
+                    From 35 to 150+ and Growing
                   </h3>
                   <p className="text-slate-700 mb-6 leading-relaxed">
-                    As I write this in June 2025, Little Big Dots has grown to over 250 active members. What started as a weekend exploration has become a thriving community with its own rituals, inside jokes, and success stories.
+                    As I write this in June 2025, Little Big Dots has grown to over 150 active members. What started as a weekend exploration has become a thriving community with its own rituals, inside jokes, and success stories.
                   </p>
                   <p className="text-slate-700 leading-relaxed">
                     The original 35 members still wear their "OG" badges with pride, and I still wake up every morning to multiple notifications from designers celebrating their latest AI victories.

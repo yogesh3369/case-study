@@ -104,20 +104,6 @@ export default function UsersSection() {
               </CardContent>
             </Card>
           </div>
-          
-          <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-slate-200 bg-white">
-            <div className="aspect-[16/9] relative">
-              <Image 
-                src="/placeholder.svg" 
-                alt="User journey map highlighting pain points" 
-                fill
-                className="object-cover"
-              />
-            </div>
-            <div className="bg-slate-900 text-white p-4">
-              <p className="text-sm md:text-base font-medium">User journey map showing key pain points and opportunities in the recruiting workflow</p>
-            </div>
-          </div>
         </div>
       </div>
     </section>

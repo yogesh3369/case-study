@@ -43,24 +43,25 @@ export default function CaseStudiesSection() {
       gradient: "from-amber-500 to-orange-600",
       bgGradient: "from-amber-50 to-orange-50",
     },
-    {
-      id: "ats-redesign",
-      title: "ATS Redesign",
-      subtitle: "From Legacy to Loved",
-      description:
-        "Transformed a cluttered applicant tracking system into a modern, unified platform that 15 agencies adopted within 18 months.",
-      image: "/placeholder.svg?height=600&width=800",
-      category: "UX/UI Design",
-      duration: "18 weeks",
-      impact: {
-        conversion: "100%",
-        revenue: "15 agencies",
-        efficiency: "67%",
-      },
-      tags: ["Enterprise UX", "Design System", "User Research"],
-      gradient: "from-blue-500 to-indigo-600",
-      bgGradient: "from-blue-50 to-indigo-50",
-    },
+    // Temporarily hidden ATS Redesign case study
+    // {
+    //   id: "ats-redesign",
+    //   title: "ATS Redesign",
+    //   subtitle: "From Legacy to Loved",
+    //   description:
+    //     "Transformed a cluttered applicant tracking system into a modern, unified platform that 15 agencies adopted within 18 months.",
+    //   image: "/placeholder.svg?height=600&width=800",
+    //   category: "UX/UI Design",
+    //   duration: "18 weeks",
+    //   impact: {
+    //     conversion: "100%",
+    //     revenue: "15 agencies",
+    //     efficiency: "67%",
+    //   },
+    //   tags: ["Enterprise UX", "Design System", "User Research"],
+    //   gradient: "from-blue-500 to-indigo-600",
+    //   bgGradient: "from-blue-50 to-indigo-50",
+    // },
   ]
 
   return (
