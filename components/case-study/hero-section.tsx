@@ -22,7 +22,7 @@ export default function HeroSection() {
               Mobile App Redesign
             </Badge>
             <Badge className="bg-purple-50 text-purple-700 border-purple-200 hover:bg-purple-100 transition-colors text-sm px-4 py-2">
-              2023
+              2025
             </Badge>
           </div>
 
@@ -48,7 +48,7 @@ export default function HeroSection() {
               <div className="relative shadow-2xl rounded-[40px] border-8 border-slate-800 bg-slate-800 transform transition-all duration-500 hover:scale-105">
                 <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-36 h-6 bg-slate-800 rounded-b-xl"></div>
                 <Image 
-                  src="/coworking-app-mockup.png" 
+                  src="/Home Page.png" 
                   alt="Coworking App Interface" 
                   width={300} 
                   height={600}

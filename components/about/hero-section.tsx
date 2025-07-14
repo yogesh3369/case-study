@@ -1,5 +1,5 @@
 import { Button } from '@/components/ui/button'
-import { ArrowRight, MapPin, Briefcase, Zap, Download, Mail, ExternalLink } from 'lucide-react'
+import { ArrowRight, MapPin, Briefcase, Zap, Download } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -69,30 +69,23 @@ export default function AboutHero() {
             
             {/* Bio Text - Left aligned with better spacing */}
             <div className="text-gray-700 space-y-4 max-w-3xl">
-              <p className="text-xl leading-relaxed font-medium">
-                I enjoy the pursuit of craft, solving complex problems, and mentoring others.
-              </p>
-              <p className="text-lg leading-relaxed">
-                I'm inquisitive by nature and love exploring this beautiful world. I also enjoy volunteering and meeting new people.
-              </p>
-              <p className="text-lg leading-relaxed">
-                Outside of work I enjoy travel, hiking, photography, and longbow archery.
-              </p>
+              <p className="text-lg leading-relaxed">I thrive on crafting thoughtful design systems, solving complex UX challenges, and helping others grow through mentorship and community.</p>
+              <p className="text-lg leading-relaxed">Curious by nature, I find energy in exploring how people think, what they need, and how we can design better experiences for them. I'm deeply passionate about emerging technologies — especially AI, automation, and the future of human-computer interaction.</p>
+              <p className="text-lg leading-relaxed">When I'm not designing, you'll find me traveling, connecting with new people, capturing moments through photography, or chasing side quests that merge design, technology, and real-world impact.</p>
             </div>
             
             {/* Action Buttons - Left aligned */}
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <Button className="group px-6 py-3 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 transition-all shadow-md hover:shadow-lg">
+              <a 
+                href="/Yogesh AI UX Designer 5 Year.pdf" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center group px-6 py-3 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 transition-all shadow-md hover:shadow-lg text-white rounded-md font-medium"
+              >
                 <Download className="mr-2 h-4 w-4" />
                 Download CV
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-              </Button>
-              <Link href="#contact" passHref>
-                <Button variant="outline" className="px-6 py-3 border-gray-300 hover:bg-gray-50 transition-all shadow-sm hover:shadow-md">
-                  <Mail className="mr-2 h-4 w-4" />
-                  Get in touch
-                </Button>
-              </Link>
+              </a>
             </div>
           </div>
         </div>
@@ -116,17 +109,6 @@ export default function AboutHero() {
               </div>
             </div>
           ))}
-        </div>
-        
-        {/* Portfolio Link - Left aligned */}
-        <div className="mt-14 text-left">
-          <Link 
-            href="/portfolio" 
-            className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-medium transition-colors group"
-          >
-            View my portfolio
-            <ExternalLink className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-          </Link>
         </div>
       </div>
     </section>

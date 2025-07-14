@@ -77,7 +77,7 @@ export default function LandingNavigation() {
             </div>
             
             <a 
-              href="/resume.pdf" 
+              href="/Yogesh AI UX Designer 5 Year.pdf" 
               target="_blank" 
               rel="noopener noreferrer"
               className="inline-flex items-center px-4 py-1.5 text-xs font-medium rounded-lg bg-blue-600 text-white hover:bg-blue-700 transition-colors shadow-sm hover:shadow"

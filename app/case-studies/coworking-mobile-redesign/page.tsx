@@ -1,3 +1,5 @@
+"use client";
+
 import HeroSection from "@/components/case-study/hero-section"
 import TldrSection from "@/components/case-study/tldr-section"
 import OutcomeSection from "@/components/case-study/outcome-section"
@@ -10,6 +12,7 @@ import ResultsSection from "@/components/case-study/results-section"
 import FinalImpactSection from "@/components/case-study/final-impact-section"
 import ArtifactsSection from "@/components/case-study/artifacts-section"
 import CaseStudyLayout from "@/components/case-study/case-study-layout"
+import { useEffect } from "react"
 
 const sections = [
   { id: 'overview', title: 'Overview' },
@@ -26,33 +29,33 @@ const sections = [
 ]
 
 const artifactsData = {
-  screens: {
-    title: 'Desktop Screens',
-    beforeImage: '/placeholder.svg', // Replace with actual image paths
-    afterImage: '/placeholder.svg',
-    description: 'Comparison of the main booking flow before and after the redesign.'
-  },
   wireframes: {
     title: 'Wireframes',
-    beforeImage: '/placeholder.svg',
-    afterImage: '/placeholder.svg',
-    description: 'Initial wireframes showing the evolution of the user interface.'
+    beforeImage: '/wireframes.png',
+    afterImage: '',
+    description: 'Initial wireframes showing the evolution of the user interface.',
+    isSingleImage: true
   },
   mobileScreens: {
     title: 'Mobile Screens',
-    beforeImage: '/placeholder.svg',
-    afterImage: '/placeholder.svg',
+    beforeImage: '/Before.PNG',
+    afterImage: '/Home Page.png',
     description: 'Mobile experience before and after the redesign.'
   },
   aiAutomation: {
     title: 'AI Automation Flow',
-    beforeImage: '/placeholder.svg',
-    afterImage: '/placeholder.svg',
-    description: 'User flow showing the AI automation implementation.'
+    beforeImage: '/AI Automation.png',
+    afterImage: '', // Not used when isSingleImage is true
+    description: 'User flow showing the AI automation implementation.',
+    isSingleImage: true
   }
 }
 
 export default function CoworkingCaseStudyPage() {
+  useEffect(() => {
+    // Scroll to top when component mounts
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <CaseStudyLayout sections={sections}>
       <div className="pt-0">

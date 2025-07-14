@@ -146,16 +146,24 @@ export default function LandingHeroSection() {
               <div className="aspect-[9/14] bg-gradient-to-br from-blue-100 to-purple-100 relative overflow-hidden pt-6">
                 {/* Replace the image source with your actual image path */}
                 <img 
-                  src="/profile-photo.jpg" 
-                  alt="Yogesh Kumar"
+                  src="/yofesh card.JPG" 
+                  alt="Yogesh Yadav"
                   className="w-full h-full object-cover object-top"
+                  loading="eager"
+                  decoding="async"
+                  style={{
+                    transform: 'translateZ(0)',
+                    backfaceVisibility: 'hidden',
+                    imageRendering: 'crisp-edges',
+                    WebkitFontSmoothing: 'subpixel-antialiased',
+                  }}
                 />
                 
                 {/* Decorative elements */}
                 <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-black/60 to-transparent flex items-end p-3">
                   <div className="text-white">
-                    <p className="font-medium text-sm">Yogesh Kumar</p>
-                    <p className="text-xs opacity-80">Product Designer</p>
+                    <p className="font-semibold text-base">Yogesh Yadav</p>
+                    <p className="text-sm opacity-90">Product Designer</p>
                   </div>
                 </div>
               </div>

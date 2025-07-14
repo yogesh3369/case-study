@@ -13,7 +13,7 @@ export default function CaseStudiesSection() {
       subtitle: "Accelerating Bookings through Lean UX",
       description:
         "Transformed a failing booking experience into a conversion powerhouse through strategic navigation redesign and automated lead management.",
-      image: "/placeholder.svg?height=600&width=800",
+      image: "/UX Case Study.png",
       category: "Mobile UX",
       duration: "3 weeks",
       impact: {
