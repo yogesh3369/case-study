@@ -22,8 +22,9 @@ export default function NumbersSection() {
                 <div className="w-14 h-14 bg-gradient-to-br from-emerald-500 to-green-600 rounded-xl flex items-center justify-center shadow-lg mb-3">
                   <Clock className="h-7 w-7 text-white" />
                 </div>
-                <span className="text-4xl font-black text-emerald-700 mb-1">14-Day</span>
-                <p className="text-slate-700 text-sm">Fully featured platform ready by October 31, 2024</p>
+                <span className="text-4xl font-black text-emerald-700 mb-1">14</span>
+                <p className="text-slate-700 text-sm">Days Delivery</p>
+                <p className="text-slate-500 text-xs">Idea to launch</p>
               </div>
             </div>
             
@@ -45,7 +46,8 @@ export default function NumbersSection() {
                   <Users className="h-7 w-7 text-white" />
                 </div>
                 <span className="text-4xl font-black text-lime-700 mb-1">35+</span>
-                <p className="text-slate-700 text-sm">Founding Members migrated with zero hiccups</p>
+                <p className="text-slate-700 text-sm">Founding Members</p>
+                <p className="text-slate-500 text-xs">Across 3 personas</p>
               </div>
             </div>
             
@@ -56,7 +58,8 @@ export default function NumbersSection() {
                   <ArrowDownUp className="h-7 w-7 text-white" />
                 </div>
                 <span className="text-4xl font-black text-yellow-700 mb-1">70%</span>
-                <p className="text-slate-700 text-sm">Cost reduction from $50+ to $15 via self-hosting</p>
+                <p className="text-slate-700 text-sm">Cost Reduction</p>
+                <p className="text-slate-500 text-xs">Through self-hosting</p>
               </div>
             </div>
             
@@ -67,7 +70,8 @@ export default function NumbersSection() {
                   <Zap className="h-7 w-7 text-white" />
                 </div>
                 <span className="text-4xl font-black text-amber-700 mb-1">80%</span>
-                <p className="text-slate-700 text-sm">Manual tasks replaced by automated workflows</p>
+                <p className="text-slate-700 text-sm">Automation</p>
+                <p className="text-slate-500 text-xs">Manual tasks replaced</p>
               </div>
             </div>
           </div>

@@ -19,7 +19,8 @@ export default function CaseStudiesSection() {
       impact: {
         conversion: "140%",
         revenue: "₹4.2L",
-        efficiency: "67%",
+        users: "12K+",
+        timeline: "4 wks"
       },
       tags: ["Mobile Design", "Conversion", "Automation"],
       gradient: "from-emerald-500 to-teal-600",
@@ -35,9 +36,10 @@ export default function CaseStudiesSection() {
       category: "EdTech",
       duration: "6 weeks",
       impact: {
-        conversion: "75%",
-        revenue: "₹5.2L",
-        efficiency: "82%",
+        delivery: "14 Days",
+        costReduction: "70%",
+        members: "35+",
+        automation: "80%"
       },
       tags: ["EdTech", "Mobile App", "UX/UI Design"],
       gradient: "from-amber-500 to-orange-600",
@@ -95,19 +97,54 @@ export default function CaseStudiesSection() {
                     {study.subtitle}
                   </p>
                   
-                  <div className="flex flex-wrap gap-16 mb-12">
-                    <div>
-                      <p className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
-                        {study.id === 'coming-soon' ? '0' : '45,00,000+'}
-                      </p>
-                      <p className="text-sm text-gray-500 mt-2 font-medium">users currently<br />on {study.title}</p>
-                    </div>
-                    <div>
-                      <p className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
-                        {study.id === 'coming-soon' ? '0' : '10,000+'}
-                      </p>
-                      <p className="text-sm text-gray-500 mt-2 font-medium">companies hire<br />on {study.title}</p>
-                    </div>
+                  <div className="grid grid-cols-2 gap-4 mb-8">
+                    {study.id === 'coworking-mobile-redesign' ? (
+                      <>
+                        <div className="bg-white p-4 rounded-lg border border-gray-100 shadow-sm">
+                          <p className="text-2xl font-bold text-emerald-600">{study.impact.conversion}</p>
+                          <p className="text-xs text-gray-500">Conversion Increase</p>
+                          <p className="text-xs text-gray-400">25% → 60%</p>
+                        </div>
+                        <div className="bg-white p-4 rounded-lg border border-gray-100 shadow-sm">
+                          <p className="text-2xl font-bold text-teal-600">{study.impact.revenue}</p>
+                          <p className="text-xs text-gray-500">Revenue Impact</p>
+                          <p className="text-xs text-gray-400">Net annual</p>
+                        </div>
+                        <div className="bg-white p-4 rounded-lg border border-gray-100 shadow-sm">
+                          <p className="text-2xl font-bold text-blue-600">{study.impact.users}</p>
+                          <p className="text-xs text-gray-500">Monthly Users</p>
+                          <p className="text-xs text-gray-400">Across 8 locations</p>
+                        </div>
+                        <div className="bg-white p-4 rounded-lg border border-gray-100 shadow-sm">
+                          <p className="text-2xl font-bold text-purple-600">{study.impact.timeline}</p>
+                          <p className="text-xs text-gray-500">Project Timeline</p>
+                          <p className="text-xs text-gray-400">Design to launch</p>
+                        </div>
+                      </>
+                    ) : (
+                      <>
+                        <div className="bg-white p-4 rounded-lg border border-gray-100 shadow-sm">
+                          <p className="text-2xl font-bold text-amber-600">{study.impact.delivery}</p>
+                          <p className="text-xs text-gray-500">Delivery</p>
+                          <p className="text-xs text-gray-400">Idea to launch</p>
+                        </div>
+                        <div className="bg-white p-4 rounded-lg border border-gray-100 shadow-sm">
+                          <p className="text-2xl font-bold text-orange-600">{study.impact.costReduction}</p>
+                          <p className="text-xs text-gray-500">Cost Reduction</p>
+                          <p className="text-xs text-gray-400">Through self-hosting</p>
+                        </div>
+                        <div className="bg-white p-4 rounded-lg border border-gray-100 shadow-sm">
+                          <p className="text-2xl font-bold text-amber-600">{study.impact.members}</p>
+                          <p className="text-xs text-gray-500">Founding Members</p>
+                          <p className="text-xs text-gray-400">Across 3 personas</p>
+                        </div>
+                        <div className="bg-white p-4 rounded-lg border border-gray-100 shadow-sm">
+                          <p className="text-2xl font-bold text-orange-600">{study.impact.automation}</p>
+                          <p className="text-xs text-gray-500">Automation</p>
+                          <p className="text-xs text-gray-400">Manual tasks replaced</p>
+                        </div>
+                      </>
+                    )}
                   </div>
                   
                   <div className="inline-block">
