@@ -16,7 +16,7 @@ interface ImageItem {
 const images: ImageItem[] = [
   {
     id: "n8n-automation",
-    src: "/optimized-images/n8n-automation-screenshot.webp",
+    src: "/little-big-dots/n8n-automation-screenshot-min.png",
     alt: "N8N Automation Workflow Screenshot",
     title: "N8N Automation Workflow",
     description: "Complete automation pipeline for member onboarding and content distribution",
@@ -24,7 +24,7 @@ const images: ImageItem[] = [
   },
   {
     id: "final-wireframes",
-    src: "/optimized-images/final-wireframes.webp",
+    src: "/little-big-dots/final-wireframes-min.png",
     alt: "Final Wireframes Design",
     title: "Final Wireframe",
     description: "Polished wireframes showing the complete user journey and interface design",
@@ -32,7 +32,7 @@ const images: ImageItem[] = [
   },
   {
     id: "wireframes-iteration-1",
-    src: "/optimized-images/wireframes-iteration-1.webp",
+    src: "/little-big-dots/wireframes-iteration-1-min.png",
     alt: "Wireframes First Iteration",
     title: "Wireframe - Iteration 1",
     description: "Initial wireframe concepts focusing on core functionality and user flow",
@@ -40,7 +40,7 @@ const images: ImageItem[] = [
   },
   {
     id: "wireframes-iteration-2",
-    src: "/optimized-images/wireframes-iteration-2.webp",
+    src: "/little-big-dots/wireframes-iteration-2-min.png",
     alt: "Wireframes Second Iteration",
     title: "Wireframe - Iteration 2",
     description: "Refined wireframes with improved navigation and enhanced user experience",
@@ -169,7 +169,7 @@ export default function ImagesSection() {
             </div>
 
             <div className="grid grid-cols-1 gap-8">
-              {automationImages.map((image, index) => (
+              {automationImages.map((image) => (
                 <div
                   key={image.id}
                   className="group relative cursor-pointer transform transition-all duration-300 hover:-translate-y-2"
@@ -190,12 +190,8 @@ export default function ImagesSection() {
                         width={1200}
                         height={600}
                         className="w-full h-auto rounded-t-2xl"
-                        priority={index < 2} // Only preload first 2 images
-                        loading={index < 2 ? 'eager' : 'lazy'}
-                        quality={85}
-                        placeholder="blur"
-                        blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+P+/HgAExgJ5d8JqIwAAAABJRU5ErkJggg=="
-                        sizes="(max-width: 768px) 100vw, 50vw"
+                        priority={true}
+                        loading="eager"
                       />
                       <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors flex items-center justify-center">
                         <div className="opacity-0 group-hover:opacity-100 transition-opacity bg-white/90 backdrop-blur-sm rounded-full p-3">
@@ -249,10 +245,6 @@ export default function ImagesSection() {
                         className="w-full h-48 md:h-56 object-cover rounded-t-2xl"
                         priority={index === 0}
                         loading={index === 0 ? "eager" : "lazy"}
-                        quality={85}
-                        placeholder="blur"
-                        blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+P+/HgAExgJ5d8JqIwAAAABJRU5ErkJggg=="
-                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       />
                       <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors flex items-center justify-center">
                         <div className="opacity-0 group-hover:opacity-100 transition-opacity bg-white/90 backdrop-blur-sm rounded-full p-3">
