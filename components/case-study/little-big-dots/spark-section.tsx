@@ -1,5 +1,6 @@
-import { MessageSquare, Lightbulb, AlertTriangle } from "lucide-react"
+import { MessageSquare, Lightbulb, AlertTriangle, ExternalLink } from "lucide-react"
 import Image from "next/image"
+import Link from "next/link"
 
 export default function SparkSection() {
   return (
@@ -64,15 +65,28 @@ export default function SparkSection() {
                     </li>
                   </ul>
                 </div>
-                <div className="relative">
-                  <div className="rounded-xl overflow-hidden shadow-xl">
+                <div className="relative group">
+                  <div className="rounded-xl overflow-hidden shadow-xl relative">
                     <Image 
                       src="/linkedin-dm-illustration.png" 
                       alt="LinkedIn conversation about v0" 
                       width={500}
                       height={350}
-                      className="object-cover"
+                      className="object-cover transition-all duration-300 group-hover:scale-105"
                     />
+                    
+                    {/* Hover Overlay with CTA */}
+                    <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-center justify-center">
+                      <Link 
+                        href="https://www.linkedin.com/posts/raktim-chatterjee-3abb44102_ai-appdevelopment-vercel-activity-7244548676381990912-UJ75/?utm_source=share&utm_medium=member_desktop&rcm=ACoAADOT0G8BhTouEhnBl7PxR-ETS0VDBPAtl9E"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="bg-white text-slate-900 px-6 py-3 rounded-full font-semibold flex items-center gap-2 hover:bg-slate-100 transition-colors transform hover:scale-105 shadow-lg"
+                      >
+                        <span>View Original Post</span>
+                        <ExternalLink className="h-4 w-4" />
+                      </Link>
+                    </div>
                   </div>
                   <div className="absolute -bottom-5 -right-5 w-24 h-24 bg-indigo-100 rounded-full flex items-center justify-center z-10">
                     <Lightbulb className="h-10 w-10 text-indigo-600" />

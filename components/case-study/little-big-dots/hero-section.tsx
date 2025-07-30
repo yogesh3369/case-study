@@ -41,7 +41,7 @@ export default function HeroSection() {
             How I transformed a weekend tool exploration into
             <span className="font-semibold text-indigo-700"> Little Big Dots </span>
             — a thriving community platform for designers navigating the AI landscape, with
-            <span className="font-semibold text-purple-700"> 70% reduced costs</span> and
+            <span className="font-semibold text-purple-700"> 78% reduced costs</span> and
             <span className="font-semibold text-blue-700"> 35+ founding members</span>.
           </p>
 
@@ -92,7 +92,7 @@ export default function HeroSection() {
                       <Database className="h-6 w-6 text-white" />
                     </div>
                   </div>
-                  <div className="text-4xl font-black text-indigo-600 mb-1">70%</div>
+                  <div className="text-4xl font-black text-indigo-600 mb-1">78%</div>
                   <div className="text-slate-700 font-semibold text-sm mb-1">Cost Reduction</div>
                   <div className="text-slate-500 text-xs">Through self-hosting</div>
                 </div>

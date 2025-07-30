@@ -37,7 +37,7 @@ export default function CaseStudiesSection() {
       duration: "6 weeks",
       impact: {
         delivery: "14 Days",
-        costReduction: "70%",
+        costReduction: "78%",
         members: "35+",
         automation: "80%"
       },

@@ -9,6 +9,7 @@ import NumbersSection from "../../../components/case-study/little-big-dots/numbe
 import LaunchSection from "../../../components/case-study/little-big-dots/launch-section"
 import FinalStorySection from "../../../components/case-study/little-big-dots/final-story-section"
 import MomentOfTruthSection from "../../../components/case-study/little-big-dots/moment-of-truth-section"
+import ImagesSection from "../../../components/case-study/little-big-dots/images-section"
 import CaseStudyLayout from "../../../components/case-study/case-study-layout"
 
 const sections = [
@@ -19,6 +20,7 @@ const sections = [
   { id: 'the-challenge', title: 'The Challenge' },
   { id: '14-day-sprint', title: '14-Day Sprint' },
   { id: 'secret-sauce', title: 'Secret Sauce' },
+  { id: 'design-artifacts', title: 'Design Artifacts' },
   { id: 'the-numbers', title: 'The Numbers' },
   { id: 'launch-strategy', title: 'Launch Strategy' },
   { id: 'real-story', title: 'Real Story' },
@@ -54,6 +56,10 @@ export default function LittleBigDotsCaseStudyPage() {
       
       <section id="secret-sauce" className="mb-6 md:mb-12">
         <SecretSauceSection />
+      </section>
+      
+      <section id="design-artifacts" className="mb-6 md:mb-12">
+        <ImagesSection />
       </section>
       
       <section id="the-numbers" className="mb-6 md:mb-12">

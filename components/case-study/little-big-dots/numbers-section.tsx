@@ -14,6 +14,71 @@ export default function NumbersSection() {
             </p>
           </div>
 
+          {/* Cost Reduction Breakdown */}
+          <div className="bg-gradient-to-br from-yellow-50 to-amber-50 rounded-2xl p-8 mb-16 border border-yellow-200">
+            <div className="text-center mb-8">
+              <h3 className="text-3xl font-bold text-yellow-800 mb-2">Cost Reduction Breakdown</h3>
+              <p className="text-yellow-700">How we achieved 78% monthly infrastructure savings</p>
+            </div>
+            
+            <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+              {/* Before & After */}
+              <div className="space-y-6">
+                <div className="bg-white rounded-xl p-6 shadow-md">
+                  <h4 className="text-lg font-semibold text-red-700 mb-4 flex items-center gap-2">
+                    <span className="w-3 h-3 bg-red-500 rounded-full"></span>
+                    Before (Baseline)
+                  </h4>
+                  <div className="space-y-2">
+                    <p className="text-slate-700"><strong>n8n Cloud:</strong> €20/month</p>
+                    <p className="text-slate-600 text-sm">Converted at ECB rate (July 30, 2025)</p>
+                    <p className="text-slate-600 text-sm">€1 = $1.1527 → €20 × 1.1527</p>
+                    <p className="text-2xl font-bold text-red-600">= $23.05/month</p>
+                  </div>
+                </div>
+                
+                <div className="bg-white rounded-xl p-6 shadow-md">
+                  <h4 className="text-lg font-semibold text-green-700 mb-4 flex items-center gap-2">
+                    <span className="w-3 h-3 bg-green-500 rounded-full"></span>
+                    After (Self-hosted)
+                  </h4>
+                  <div className="space-y-2">
+                    <p className="text-slate-700"><strong>AWS Lightsail:</strong></p>
+                    <p className="text-slate-600 text-sm">1 GB RAM, IPv6-only</p>
+                    <p className="text-2xl font-bold text-green-600">$5.00/month</p>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Calculation */}
+              <div className="bg-white rounded-xl p-6 shadow-md">
+                <h4 className="text-lg font-semibold text-yellow-700 mb-4">Calculation</h4>
+                <div className="space-y-4">
+                  <div className="bg-slate-50 rounded-lg p-4">
+                    <p className="text-sm text-slate-600 mb-2">Formula:</p>
+                    <div className="font-mono text-sm text-slate-800">
+                      Reduction % = (Before - After) / Before × 100
+                    </div>
+                  </div>
+                  
+                  <div className="bg-slate-50 rounded-lg p-4">
+                    <p className="text-sm text-slate-600 mb-2">Math:</p>
+                    <div className="font-mono text-sm text-slate-800 space-y-1">
+                      <div>($23.05 - $5.00) / $23.05 × 100</div>
+                      <div>= $18.05 / $23.05 × 100</div>
+                      <div>= 78.31% ≈ <strong className="text-yellow-700">78%</strong></div>
+                    </div>
+                  </div>
+                  
+                  <div className="text-center pt-4">
+                    <div className="text-3xl font-black text-yellow-700">~78%</div>
+                    <p className="text-sm text-slate-600">Monthly infrastructure cost reduction</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
           {/* Numbers Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
             {/* 14-Day Delivery */}
@@ -50,18 +115,7 @@ export default function NumbersSection() {
                 <p className="text-slate-500 text-xs">Across 3 personas</p>
               </div>
             </div>
-            
-            {/* 70% Cost Reduction */}
-            <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all">
-              <div className="flex flex-col items-center text-center">
-                <div className="w-14 h-14 bg-gradient-to-br from-yellow-500 to-amber-600 rounded-xl flex items-center justify-center shadow-lg mb-3">
-                  <ArrowDownUp className="h-7 w-7 text-white" />
-                </div>
-                <span className="text-4xl font-black text-yellow-700 mb-1">70%</span>
-                <p className="text-slate-700 text-sm">Cost Reduction</p>
-                <p className="text-slate-500 text-xs">Through self-hosting</p>
-              </div>
-            </div>
+
             
             {/* 80% Automation */}
             <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all">
